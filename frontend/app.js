@@ -1,4 +1,4 @@
-const API = "/todos";
+const API = "http://localhost:8080/todos";
 
 // ✅ Templates (frontend-only). Clicking one fills the form.
 // You can edit the notes (kg/reps) before saving.
@@ -156,10 +156,6 @@ function renderList(todos) {
         <span>${escapeHtml(t.title)}</span>
       </div>
       <div class="card-desc">${escapeHtml(t.description || "—")}</div>
-      <div class="card-meta">
-        <span class="pill">id: ${t.id}</span>
-        <span class="pill">${done ? "completed" : "open"}</span>
-      </div>
     `;
 
     const right = document.createElement("div");
